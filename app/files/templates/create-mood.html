@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить настроение</title>
+</head>
+<body>
+    <h1>Добавить настроение</h1>
+
+    <form action="/add_mood/" method="post">
+        {% csrf_token %}
+        
+        <label for="mood">Настроение:</label>
+        <select name="mood" id="mood">
+            <option value="happy">Счастлив</option>
+            <option value="sad">Грустный</option>
+            <option value="angry">Злой</option>
+            <option value="neutral">Нейтральный</option>
+        </select>
+        <br><br>
+
+        <label for="coment">Комментарий:</label><br>
+        <textarea name="coment" id="note" rows="4" cols="40"></textarea>
+        <br><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>
